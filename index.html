@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cookies</title>
+</head>
+<body>
+  <p class="welcome">choose something</p>
+  <button class="one">1</button>
+  <button class="two">2</button>
+  <button class="three">3</button>
+  <button class="four">4</button>
+  <button class="five">5</button>
+  <p class="chosen"></p>
+  <script>
+
+    if(document.cookie)
+    {
+      const value = document.cookie.split('=')[1];
+      document.querySelector('.welcome').innerHTML = "last time you've chose "+value;
+    }
+
+    document.querySelector('.one').addEventListener('click', () =>
+    {
+      document.cookie = "number=one; expires=Thu, 26 Oct 2023 12:00:00 UTC";
+      console.log('cookie created for number one');
+      document.querySelector('.chosen').innerHTML = "one";
+    });
+    document.querySelector('.two').addEventListener('click', () =>
+    {
+      document.cookie = "number=two; expires=Thu, 26 Oct 2023 12:00:00 UTC";
+      console.log('cookie created for number two');
+      document.querySelector('.chosen').innerHTML = "two";
+    });
+    document.querySelector('.three').addEventListener('click', () =>
+    {
+      document.cookie = "number=three; expires=Thu, 26 Oct 2023 12:00:00 UTC";
+      console.log('cookie created for number three');
+      document.querySelector('.chosen').innerHTML = "three";
+    });
+    document.querySelector('.four').addEventListener('click', () =>
+    {
+      document.cookie = "number=four; expires=Thu, 26 Oct 2023 12:00:00 UTC";
+      console.log('cookie created for number four');
+      document.querySelector('.chosen').innerHTML = "four";
+    });
+    document.querySelector('.five').addEventListener('click', () =>
+    {
+      document.cookie = "number=five; expires=Thu, 26 Oct 2023 12:00:00 UTC";
+      console.log('cookie created for number five');
+      document.querySelector('.chosen').innerHTML = "five";
+    });
+
+  </script>
+</body>
+</html>
